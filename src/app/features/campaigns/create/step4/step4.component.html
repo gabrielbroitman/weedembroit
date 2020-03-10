@@ -1,0 +1,21 @@
+<app-header url="/campaigns" [showCancel]="true" [showMenu]="false"></app-header>
+<ion-content>
+  <app-create-campaign (changePageEvent)="next()" [disableNext]="!description">
+
+    <div>
+      <div class="label">
+        <span>
+          Descreva o seu desejo <span class="rule">(máximo 650 caracteres)</span>
+        </span>
+      </div>
+      <ion-item>
+        <ion-textarea rows="12" [(ngModel)]="description"
+          placeholder="Conte sua história de forma breve e descreva seu Desejo e Necessidade">
+        </ion-textarea>
+      </ion-item>
+
+    </div>
+
+
+  </app-create-campaign>
+</ion-content>

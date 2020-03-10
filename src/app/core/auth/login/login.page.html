@@ -1,0 +1,16 @@
+<ion-content class="ion-padding" fullscreen>
+	<img src="../../../../assets/svg/Logo.svg" class="logo" />
+	<form [formGroup]="loginForm" (ngSubmit)="send()" class="form">
+		<app-input-form label="E-mail">
+			<ion-input type="email" inputmode="email" formControlName="email"></ion-input>
+		</app-input-form>
+		<app-input-form label="Senha">
+			<ion-input type="password" inputmode="password" formControlName="password"></ion-input>
+		</app-input-form>
+		<ion-button type="submit" color="danger" expand="block" shape="round">Entrar
+		</ion-button>
+		<ion-button routerLink="/signup" fill="clear" color="light" expand="block">Criar uma conta</ion-button>
+		<ion-button href="https://google.com/" target="_blank" fill="clear" color="help" expand="block" size="small">
+			Precisa de ajuda?</ion-button>
+	</form>
+</ion-content>

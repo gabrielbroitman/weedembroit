@@ -1,0 +1,16 @@
+<ion-toolbar color="danger" class="categories">
+  <div class="title">
+    <span>Campanhas</span>
+  </div>
+  <ion-segment  slot="end" scrollable>
+    <div style="color: white;">
+      <ion-select  (ionChange)="filterCampaigns($event)" slot="start" interface="popover" value="Todos">
+        <ion-select-option  ngValue="undefined" translate>Todos</ion-select-option>
+
+        <ion-select-option *ngFor="let category of categories" ngValue="categoria._id" translate>{{ category.name }}</ion-select-option>
+        
+      </ion-select>
+
+    </div>
+  </ion-segment>
+</ion-toolbar>

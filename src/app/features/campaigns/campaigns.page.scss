@@ -1,0 +1,24 @@
+app-create-campaign {
+    height: calc(100% - 130px);
+}
+
+ion-button{
+    height: 40px;
+    width: 135px;
+}
+ion-content{
+    --background: #F8F8F8;
+    .no-more{
+        margin-top: 20px;
+        margin-bottom: 60px;
+        text-align: center;
+        ion-icon{
+            font-size: 35px;
+            color: var(--ion-color-primary);
+        }
+        span{
+            color: var(--ion-color-primary);
+        }
+    }
+}
+

@@ -1,0 +1,60 @@
+<ion-app>
+	<ion-menu style="overflow:auto" content-id="main-content" side="end">
+		<ion-header no-border>
+			<ion-toolbar color="secondary">
+				<div class="header">
+					<ion-menu-toggle>
+						<ion-icon style="float: left" size="large" name="close"></ion-icon>
+					</ion-menu-toggle>
+					<div class="logo">
+						<ion-title>
+							<img src="../../assets/svg/Logo.svg" />
+						</ion-title>
+					</div>
+				</div>
+			</ion-toolbar>
+		</ion-header>
+		<ion-content>
+			<ion-list class="no-margin-bottom ion-no-padding" color="light">
+				<span *ngIf="user; else loggedOut">
+					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+						<ion-item class="ion-text-center ion-no-padding" routerDirection="root" [routerLink]="[p.url]"
+							detail="false" [class.selected]="selectedIndex == i">
+							<ion-label color="primary">{{ p.title }}</ion-label>
+
+						</ion-item>
+					</ion-menu-toggle>
+				</span>
+				<ng-template #loggedOut>
+					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPagesLoggedOut; let i = index">
+						<ion-item class="ion-text-center ion-no-padding" routerDirection="root" [routerLink]="[p.url]"
+							detail="false" [class.selected]="selectedIndex == i">
+							<ion-label color="primary">{{ p.title }}</ion-label>
+
+						</ion-item>
+					</ion-menu-toggle>
+				</ng-template>
+				<ion-menu-toggle>
+					<ion-item (click)="logout()" class="ion-text-center ion-no-padding" detail="false"
+						[class.selected]="selectedIndex == i">
+						<ion-label color="primary">Sair</ion-label>
+
+					</ion-item>
+				</ion-menu-toggle>
+				<ion-toolbar class="display-flex-center">
+					<div slot="start" style="margin-left: 20%;width: 40%; color: red; margin-right: 0%;">
+						<ion-text><b>Compartilhe a Missão do bem</b></ion-text>
+					</div>
+					<ion-button color="danger" fill="clear" style="--border-radius: 1em;" class="ion-no-padding">
+						<ion-icon size="large" name="logo-facebook"></ion-icon>
+					</ion-button>
+					<ion-button color="danger" fill="clear" style="--border-radius: 1em;" class="ion-no-padding">
+						<ion-icon size="large" name="logo-instagram"></ion-icon>
+					</ion-button>
+				</ion-toolbar>
+			</ion-list>
+		</ion-content>
+	</ion-menu>
+	<ion-router-outlet id="main-content"></ion-router-outlet>
+	<!-- <app-tabs-bottom></app-tabs-bottom> -->
+</ion-app>

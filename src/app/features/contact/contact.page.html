@@ -1,0 +1,69 @@
+<app-header url="/login" [showIconLeft]="true"></app-header>
+<ion-toolbar color="danger">
+  <div class="title">
+    <ion-title>Contato</ion-title>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="1" size="5">
+        <ion-button expand="full"><span>
+            <ion-icon color="danger" name="mail"></ion-icon>E-mail
+          </span>
+        </ion-button>
+      </ion-col>
+      <ion-col size="5">
+        <ion-button expand="full"><span>
+            <ion-icon color="danger" name="chatboxes"></ion-icon>Chat
+          </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="1" size="5">
+
+        <ion-button expand="full"><span>
+            <ion-icon color="danger" name="logo-whatsapp"></ion-icon>WhatsApp
+          </span></ion-button>
+      </ion-col>
+      <ion-col size="5">
+        <ion-button expand="full"><span>
+            <ion-icon color="danger" name="logo-whatsapp"></ion-icon>Messenger
+          </span></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="1" size="10">
+        <ion-button slots="start" expand="full">
+          <ion-icon color="danger" name="call"></ion-icon>+55 51 3061 6044
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col offset="1" size="10">
+        <div style="padding-left: 5px">Entre em contato com a Missão do Bem</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding-top: 0" offset="1" size="10">
+        <ion-input [(ngModel)]="email" placeholder="Seu e-mail"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding-top: 0" offset="1" size="10">
+
+        <ion-input [(ngModel)]="telephone" placeholder="Seu telefone"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="padding-top: 0" offset="1" size="10">
+
+        <ion-textarea [(ngModel)]="message" autoGrow="true" placeholder="Escreva sua mensagem"></ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-content class="ion-no-padding">
+  <ion-buttons class="ion-no-padding" >
+    <ion-icon (click)="dismiss()" style="margin-left: 2%;margin-top: 2%" size="large" name="close"></ion-icon>
+  </ion-buttons>
+  <div style="width: 80%;margin-left:10%; text-align: center;">
+    <p>Para ver mensagens, você precisa de uma conta gratuita</p>
+  </div>
+  <div style="width: 50%;margin-left:25%; text-align: center;">
+    <ion-button (click)=" goToRegisterPage()" color="danger" shape="round" expand="full">Cria uma conta</ion-button>
+  </div>
+
+  <div style="width: 50%;margin-left:24%; text-align: center; margin-top: 10%">
+    <ion-button (click)=" goToLoginPage()" color="primary"  fill="clear">Já tem uma conta?</ion-button>
+  </div>
+
+
+</ion-content>

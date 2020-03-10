@@ -1,0 +1,7 @@
+{
+  "name": "MissaoBem",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

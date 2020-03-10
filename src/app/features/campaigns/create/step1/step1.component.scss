@@ -1,0 +1,20 @@
+.title{
+    font-size: 15px; 
+    font-weight: 600;
+}
+
+.op-first{
+    margin-top: 20px;
+}
+.op-description{
+    margin-top: 10px
+}
+.op-second{
+    margin-top: 20px; margin-bottom: 30px;
+}
+.op-content{
+    display: flex; align-items: center;
+    span{
+        font-weight: 600; padding-left: 10px;
+    }
+}

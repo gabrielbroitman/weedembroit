@@ -1,0 +1,33 @@
+.category{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    height: 40px;
+    align-items: center;
+    font-size: 15px;
+    .name{
+        font-weight: 600;
+    }
+    .change{
+        font-size: 12px;
+    }
+}
+
+ion-item{
+    border-radius: 4px;
+}
+
+.label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    .rule{
+        font-size: 10px;
+        opacity: 0.7;
+    }
+}

@@ -1,0 +1,41 @@
+.description{
+    opacity: 0.70;
+}
+
+ion-content{
+    --background: var(--ion-color-secondary);
+    --color:white;
+    text-align: center;
+    .content-div{
+        position: relative;
+        height: 100%;
+        .cont{
+            position: absolute;
+            bottom: 0;
+            .icon{
+                font-size: 80px;
+            }
+            .title{
+                font-size: 25px;
+                div{
+                    padding-bottom: 20px;
+                }
+            }
+            .description{
+                margin-top: 10px;
+                font-size: 15px;
+            }
+            .sub-text{
+                margin-top: 60px;
+                font-size: 12px;
+                .mark{
+                    font-weight: 600;
+                }
+            }
+            .button{
+                margin-top: 20px;
+            }
+        }
+    }
+   
+}

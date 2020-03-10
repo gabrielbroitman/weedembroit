@@ -1,0 +1,38 @@
+<app-header url="/campaigns" [showCancel]="true" ></app-header>
+
+<ion-content *ngIf="loaded">
+  <div class="avatar">
+    <ion-avatar>
+      <img [src]="campaign.user.picture">
+    </ion-avatar>
+  </div>
+  <div class="form">
+    <div class="text1">
+      <h2>Quanto você gostaria de doar para {{ campaign?.user?.fullName}}?
+      </h2>
+    </div>
+    <div class="input">
+      <app-input-form label="Sua doação">
+        <ion-input type="text" [(ngModel)]="donation.amount" placeholder=" "><span style="margin-right: 5px;">R$</span>
+        </ion-input>
+      </app-input-form>
+    </div>
+
+    <div class="image">
+
+    </div>
+    <div class="sub-text">
+      As doações monetárias serão revestidas pela Missão Do Bem em Bens e Serviços
+    </div>
+  </div>
+
+  <app-payment-method [donation]="donation"></app-payment-method>
+
+  <div class="button">
+    <ion-button (click)="sendDonation()" color="danger">Efetue sua doação</ion-button>
+
+    <div class="sub-text">
+      As doações monetárias serão revestidas pela Missão Do Bem em Bens e Serviços
+    </div>
+  </div>
+</ion-content>

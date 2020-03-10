@@ -1,0 +1,19 @@
+.input-form{
+    margin-top: 10px;
+    vertical-align: center;
+    margin-bottom: 25px;
+}
+.label{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.description{
+    opacity: 0.70;
+}
+
+:host ::ng-deep app-input-form{
+    .customLabel{
+        color: #737373;
+    }
+}

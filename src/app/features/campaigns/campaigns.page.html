@@ -1,0 +1,28 @@
+<app-header url="/login" [showIconLeft]="true"></app-header>
+<app-filter-categories (category)="filterCategories($event.detail.value)"></app-filter-categories>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="findActiveCampaigns($event)">
+    <ion-refresher-content
+      pullingIcon="refresh"
+      pullingText="Arraste para atualizar"
+      refreshingSpinner="circles"
+      refreshingText="Atualizando...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <app-campaigns-card *ngFor="let campaign of filteredCampaigns" [campaign]="campaign"></app-campaigns-card>
+
+  <div class="no-more">
+    <div>
+      <ion-icon color="danger" name="heart-empty"></ion-icon>
+    </div>
+    <div>
+      <span>Todas as Campanhas visualizadas.</span>
+    </div>
+    <div>
+      <span>Por enquanto, não há mais campanhas.</span>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-button routerLink="create" color="secondary" shape="round">Criar campanha</ion-button>
+  </ion-fab>
+</ion-content>

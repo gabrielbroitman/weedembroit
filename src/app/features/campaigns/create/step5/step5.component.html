@@ -1,0 +1,31 @@
+<app-header url="/campaigns" [showCancel]="true" [showMenu]="false"></app-header>
+<ion-content>
+  <app-create-campaign (changePageEvent)="next()" [disableNext]="!value" [showBack]="true">
+
+    <div>
+      <div class="label">
+        <span>
+          Valor do seu desejo
+        </span>
+      </div>
+      <app-input-form label="R$" position="">
+        <ion-input type="text" [(ngModel)]="value">
+        </ion-input>
+      </app-input-form>
+
+      <div class="description">
+        <ion-icon name="information-circle"></ion-icon>
+        <span>
+          Informe o Valor monetário do seu Desejo o mais realístico possível,
+          preferencialmente baseado em pesquisas do bem/serviço que você deseja.
+        </span>
+        <div>
+          <span>
+            Este valor é necessário para a Missão do Bem estabelecer como parâmetro
+            a ser arrecadado para garantir a aquisição do bem ou serviço.
+          </span>
+        </div>
+      </div>
+    </div>
+  </app-create-campaign>
+</ion-content>

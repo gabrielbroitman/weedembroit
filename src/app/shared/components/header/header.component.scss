@@ -1,0 +1,41 @@
+.display-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 64px;
+
+    .logo {
+        @extend .display-flex-center;
+        ion-title > img{
+            width: 90px;
+        }
+    }
+
+    .icon-left{
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 18px;
+    }
+
+    .button-start{
+        @extend .display-flex-center;
+    }
+
+    .icon-menu{
+        @extend .display-flex-center;
+        font-size: 35px;
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    .ripple-parent {
+        position: relative;
+    }
+}

@@ -1,0 +1,24 @@
+<ion-content>
+  <div class="title">
+    Selecione uma categoria
+  </div>
+  <div>
+    <ion-item lines="full" *ngFor="let category of categories;">
+      <div class="category" (click)="select(category._id)">
+        <div class="icon" *ngIf="category.selected">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </div>
+        <div> 
+          <ion-label>{{category.name}}</ion-label>
+        </div>
+      </div>
+    </ion-item>
+    <div class="bottom">
+      Não encontrou sua categoria?
+      <div (click)="openSugestions()">
+        Criar Categoria
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

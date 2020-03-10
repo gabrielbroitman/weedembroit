@@ -1,0 +1,32 @@
+ion-toolbar{
+    height: 60px;
+    padding-left: 15px;
+    .title{
+        margin-top: 5px;
+        font-size: larger;
+        font-weight: 600;
+    }
+    ion-segment{
+        align-items: center;
+        div{
+            margin-right: 6px;
+            border-style: solid;
+            border-radius: 22px;
+            border-color: white;
+            border-width: 1px;
+            height: 25px;
+            padding-left: 8px;
+            padding-top: 2px;
+            padding-right: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
+}
+
+ion-select {
+    --placeholder-color: white;
+}

@@ -1,0 +1,14 @@
+ion-content {
+   --background: rgb(224, 142, 243);
+}
+
+.logo {
+	width: 150px;
+	height: 100px;
+	margin: 5vh auto 20vh auto;
+	display: block;
+}
+
+.ion-color-help {
+	--ion-color-base: var(--ion-color-primary-tint);
+}

@@ -1,0 +1,36 @@
+.description{
+    opacity: 0.70;
+}
+
+ion-content{
+
+    .content-div{
+        position: relative;
+        height: 100%;
+        .cont{
+            position: absolute;
+            bottom: 0;
+            .title{
+                font-size: 25px;
+                font-weight: 600;
+                text-align: center;
+                div{
+                    padding-bottom: 20px;
+                }
+            }
+            .description{
+                font-size: 15px;
+            }
+            .sub-text{
+                margin-top: 50px;
+                font-size: 12px;
+                text-align: center;
+            }
+            .button{
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+    }
+   
+}

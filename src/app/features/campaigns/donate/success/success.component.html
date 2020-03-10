@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="avatar">
+    <ion-avatar>
+      <img [src]="campaign.user.picture">
+    </ion-avatar>
+  </div>
+  <div class="text">
+    <div>
+      <h3 style="font-weight: 100;">Muito obrigado!</h3>
+    </div>
+    <div>
+      <h4 style="font-weight: 100;">Aguarde a confimação da sua doação.</h4>
+    </div>
+  </div>
+
+  <div>
+    <ion-card>
+      <div class="title">
+        <ion-title color="danger">Compartilhe esta Campanha</ion-title>
+      </div>
+      <div style="width: 60%; margin-left: 20%; margin-bottom: 5%">
+        <ion-text color="primary">Para aumentar as suas chances de {{ campaign?.user?.fullName }} de alcançar o desejo
+        </ion-text>
+      </div>
+
+      <div style="margin-bottom: 5%">
+        <ion-button color="danger"  style="--border-radius: 3em; margin-right: 5%;" class="ion-no-padding">
+          <ion-icon size="large" name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button color="danger" style="--border-radius: 3em;" class="ion-no-padding">
+          <ion-icon size="large" name="logo-instagram"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
+
+  <div style="text-align: center; margin-top: 50%">
+    <ion-button (click)="continuar()" color="primary"><ion-label>Continuar</ion-label></ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,49 @@
+<app-header url="/login" [showIconLeft]="true"></app-header>
+<ion-toolbar color="danger">
+  <div class="title">
+    <ion-title>Configurações</ion-title>
+  </div>
+
+</ion-toolbar>
+<div class="avatar">
+  <ion-avatar *ngIf="user">
+    <img [src]="user.picture">
+  </ion-avatar>
+</div>
+<ion-content>
+  
+  <ion-card>
+    <div class="fields">
+      <div class="texto">
+        <ion-label>Nome</ion-label>
+        <br>
+        <ion-text>{{ user?.fullName }}</ion-text>
+      </div>
+      <div class="texto">
+        <ion-label>Usuário</ion-label>
+        <br>
+        <ion-text>{{ user?.userName }}</ion-text>
+      </div>
+      <div class="texto">
+        <ion-label>E-mail</ion-label>
+        <br>
+        <ion-text>{{ user?.email }}</ion-text>
+      </div>
+      <div class="texto">
+        <ion-label>Telefone</ion-label>
+        <br>
+        <ion-text>{{ user?.phone }}</ion-text>
+      </div>
+    </div>
+    <div class="button">
+      <ion-button color="dark">
+        Editar
+      </ion-button>
+    </div>
+  </ion-card>
+  <br>
+  <div (click)="logout()" class="ion-text-center">
+    <ion-text color="danger">Sair da conta</ion-text>
+  </div>
+  <app-tabs-bottom></app-tabs-bottom>
+</ion-content>

@@ -1,0 +1,45 @@
+<div routerDirection="root" [routerLink]="['/campaigns/' + campaign._id]">
+  <div style="margin-left: 6%" class="status">
+    <b>
+      <ion-text color="secondary">STATUS:</ion-text>
+      <ion-text style="margin-left: 1%;" color="danger">{{ campaign?.active ? 'ATIVA' : campaign?.status == 'ANALYZING' ? 'PENDENTE' : 'ENCERRADA' }}</ion-text>
+    </b>
+  </div>
+
+  <ion-card>
+    <div class="image">
+      <img src="../../../../assets/images/bb.jpg" />
+    </div>
+    <div class="bar">
+      <div>
+        Campanha <span class="danger">{{ campaign?.percentageCompleted}}%</span> completa
+        <div>
+          Faltam <span class="danger">90</span> dias
+          <span>
+            <ion-icon name="heart-empty"></ion-icon>
+          </span>
+          <span class="danger">0</span> doou
+        </div>
+      </div>
+    </div>
+    <div class="avatar">
+      <ion-avatar>
+        <img [src]="campaign.user.picture">
+
+      </ion-avatar>
+    </div>
+  </ion-card>
+  <div class="dates" style="margin-left:6%">
+    <div style="display: inline; width: 25%;">
+      <ion-note color="secondary">Início:</ion-note><b>
+        <ion-text style="padding-left: 2px;" color="danger">{{campaign?.approvedDate | date: 'dd/MM/yyyy'}}</ion-text>
+      </b>
+    </div>
+    <div style="display: inline;  margin-left: 16%">
+      <ion-note color="secondary">Termino:</ion-note><b>
+        <ion-text style="padding-left: 2px;" color="danger">{{campaign?.expireIn | date: 'dd/MM/yyyy'}}</ion-text>
+      </b>
+    </div>
+
+  </div>
+</div>
