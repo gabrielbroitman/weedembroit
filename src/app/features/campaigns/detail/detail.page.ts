@@ -29,7 +29,7 @@ export class DetailPage implements OnInit {
       console.log(res.id);
       id = res.id;
       if (id) {
-        this.service.getCampanha(id).subscribe(res => {
+        this.service.getCampanha(id).subscribe((res: any) => {
           this.campaign = res;
       loading.dismiss();
       this.loaded = true;
