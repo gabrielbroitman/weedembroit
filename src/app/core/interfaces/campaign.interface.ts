@@ -20,7 +20,8 @@ export interface CampaignInterface {
   user;
   approvedDate;
   expireIn;
-  
+  daysToExpire;
+  countDonators;
   dateCreate?: Date;
   _id?;
   isValid?: boolean;
