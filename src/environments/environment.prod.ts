@@ -1,4 +1,4 @@
 export const environment = {
 	production: true,
-	api: 'https://backend.missaodobem.app/api/'
+	api: 'http://52.200.73.226:3000/'
 };
