@@ -1,5 +1,6 @@
 import { AddressInterface } from "./address.interface";
 import { ContactInterface } from "./contact.interface";
+import { CategoryInterface } from './category.interface';
 
 export interface CampaignInterface {
   title?: string;
@@ -11,6 +12,16 @@ export interface CampaignInterface {
   categoryId?: number;
   degreeKinship?: string;
   urlImage?: string;
+  category?: CategoryInterface;
+  active?;
+  status?;
+
+  percentageCompleted;
+  user;
+  approvedDate;
+  expireIn;
+  
   dateCreate?: Date;
+  _id?;
   isValid?: boolean;
 }
