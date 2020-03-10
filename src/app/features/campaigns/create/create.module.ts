@@ -27,8 +27,8 @@ import { SuccessComponent } from './success/success.component';
     BrMaskerModule
   ],
   declarations: [
-    // Step1Component,
-    // Step2Component,
+    Step1Component,
+    Step2Component,
     Step3Component,
     Step4Component,
     Step5Component,
